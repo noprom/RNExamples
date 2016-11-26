@@ -7,16 +7,16 @@ import {Navigator} from 'react-native';
 import MainPage from './containers/MainPage';
 
 export default class App extends React.Component {
-  render (
+  render() {
     return (
-      <Provider store = {store}>
+      <Provider store={store}>
         <Navigator
-          initialRoute = {{component: MainPage}},
-          renderScene = {(route, navigator) => {
+          initialRoute={{component: MainPage}}
+          renderScene={(route, navigator) => {
             return <route.component navigator={navigator} {...route.args}/>
           }}
         />
       </Provider>
     );
-  );
+  }
 }
