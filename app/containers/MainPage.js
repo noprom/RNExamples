@@ -17,3 +17,17 @@ class MainPage extends Component {
     );
   );
 }
+
+const mapStateToProps = (state) => {
+  return {
+    number: state.counter.count
+  }
+}
+
+const mapDispatchToProps = (dispatch) => {
+  return {
+    actions: bindActionCreators(Actions, dispatch);
+  }
+}
+
+export default connect(mapStateToProps, mapDispatchToProps)(MainPage);
