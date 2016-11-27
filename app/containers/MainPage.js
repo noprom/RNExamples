@@ -8,14 +8,14 @@ import * as Actions from '../actions/actionCreator';
 import Counter from '../components/Counter';
 
 class MainPage extends Component {
-  render(
+  render() {
     const {number, actions} = this.props;
     return (
       <View>
         <Counter text={number} onPress={actions} />
       </View>
     );
-  );
+  };
 }
 
 const mapStateToProps = (state) => {
@@ -26,7 +26,7 @@ const mapStateToProps = (state) => {
 
 const mapDispatchToProps = (dispatch) => {
   return {
-    actions: bindActionCreators(Actions, dispatch);
+    actions: bindActionCreators(Actions, dispatch)
   }
 }
 
